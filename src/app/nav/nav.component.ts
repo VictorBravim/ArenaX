@@ -6,4 +6,20 @@ import { Component } from '@angular/core';
   standalone: true,
   templateUrl: './nav.component.html',
 })
-export class NavComponent {}
+export class NavComponent {
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  scrollToSection(id: string) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (this.menuOpen) {
+      this.menuOpen = false;
+    }
+  }
+}
