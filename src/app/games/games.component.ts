@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID, HostListener } from '@angular/core';
+import { Component, Inject, PLATFORM_ID} from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -9,29 +9,12 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
   styleUrls: ['./games.component.css']
 })
 export class GamesComponent {
-  isMobile = false;
-  backgroundImage = '';
+  backgroundImage = 'assets/images/bg2.png';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: any) {
-    if (isPlatformBrowser(this.platformId)) {
-      this.updateBackgroundImage();
-    }
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
   get backgroundImageStyle() {
     return isPlatformBrowser(this.platformId) ? { 'background-image': `url(${this.backgroundImage})` } : {};
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    if (isPlatformBrowser(this.platformId)) {
-      this.updateBackgroundImage();
-    }
-  }
-
-  updateBackgroundImage() {
-    this.isMobile = window.innerWidth <= 768;
-    this.backgroundImage = this.isMobile ? 'assets/images/bg-mobile2.png' : 'assets/images/bg2.png';
   }
 
   games = [

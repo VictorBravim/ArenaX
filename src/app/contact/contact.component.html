@@ -5,19 +5,23 @@
         <div class="bg-transparent p-6 shadow-lg flex flex-col items-center relative z-10">
           <div class="bg-transparent flex flex-col text-left mb-4 w-full">
             <h1 class="bg-transparent text-3xl lg:text-4xl font-bold text-white mb-4">Contato</h1>
-            <p class="bg-transparent text-lg text-gray-400 mb-4">Entre em contato conosco preenchendo o formulário abaixo:</p>
+            <p class="bg-transparent text-lg text-gray-400 mb-4">Entre em contato conosco preenchendo o formulário
+              abaixo:</p>
           </div>
           <form (ngSubmit)="onSubmit()" class="bg-transparent w-full">
             <div class="bg-transparent mb-4">
               <label for="email" class="bg-transparent block text-gray-400 text-sm font-bold mb-2">Email:</label>
-              <input type="email" id="email" [(ngModel)]="contact.email" name="email" required class="bg-transparent shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <input type="email" id="email" [(ngModel)]="contact.email" name="email" required
+                class="bg-transparent shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
             <div class="bg-transparent mb-4">
               <label for="message" class="bg-transparent block text-gray-400 text-sm font-bold mb-2">Mensagem:</label>
-              <textarea id="message" [(ngModel)]="contact.message" name="message" required class="bg-transparent shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+              <textarea id="message" [(ngModel)]="contact.message" name="message" required
+                class="bg-transparent shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
             <div class="bg-transparent flex items-center justify-between">
-              <button type="submit" class=" bg-white hover:bg-gray-500 text-black font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+              <button type="submit"
+                class=" bg-white hover:bg-gray-500 text-black font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
                 Enviar
               </button>
             </div>
