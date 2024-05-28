@@ -1,14 +1,16 @@
 // src/app/games/games.component.ts
-import { Component, Inject, PLATFORM_ID, HostListener } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, HostListener, ViewChild } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { SlickCarouselComponent } from 'ngx-slick-carousel';
+import { SlickCarouselComponent, SlickCarouselModule } from 'ngx-slick-carousel';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-games',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SlickCarouselModule],
   templateUrl: './games.component.html',
-  styleUrls: []
+  styleUrls: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GamesComponent {
   isMobile = false;
@@ -34,10 +36,9 @@ export class GamesComponent {
   updateBackgroundImage() {
     this.isMobile = window.innerWidth <= 768;
     this.backgroundImage = this.isMobile ? 'assets/images/bg-mobile.png' : 'assets/images/bg.png';
-
   }
 
-  @ViewChild('slickModal') slickModal: SlickCarouselComponent;
+  @ViewChild('slickModal') slickModal: SlickCarouselComponent | null = null;
 
   carros = [
     {
@@ -93,6 +94,6 @@ export class GamesComponent {
   };
 
   nextSlide() {
-    this.slickModal.slickNext();
+    this.slickModal?.slickNext();
   }
 }
