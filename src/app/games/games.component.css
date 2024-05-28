@@ -30,3 +30,9 @@ button {
 button:hover {
   background-color: rgba(129, 129, 129, 0.7);
 }
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+}
