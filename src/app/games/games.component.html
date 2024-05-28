@@ -1,0 +1,31 @@
+<!-- src/app/games/games.component.html -->
+<div id="games" class="h-screen flex justify-center items-center mb-12 lg:mb-0 py-12 px-4 md:px-8 lg:px-16 bg-cover bg-center" [ngStyle]="{'background-image': 'url(/assets/alugar.png)'}">
+    <div class="container mx-auto py-12">
+      <div class="flex justify-between items-center px-5 lg:px-20">
+        <h1 class="text-white text-3xl lg:text-4xl lg:mb-4">Especiais de Hoje</h1>
+        <button class="text-white text-4xl" (click)="nextSlide()">
+          Proximo
+        </button>
+      </div>
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="sliderConfig">
+        <div ngxSlickItem *ngFor="let carro of carros" class="px-2 py-2 pb-4 relative">
+          <div class="bg-gray-custom flex flex-col justify-center items-center p-4 overflow-hidden">
+            <img [src]="carro.imagem" [alt]="carro.nome" width="400" height="250" />
+            <div class="p-4 text-center">
+              <h3 class="text-xl font-semibold text-white mb-2">{{carro.nome}}</h3>
+              <div class="flex items-center justify-center mb-2">
+                <h4 class='text-lg text-gray-500'>Ano 2024</h4>
+              </div>
+              <div class="flex items-center justify-center gap-6">
+                <p class="text-xl text-yellow-custom2">{{carro.preco}} <span class='text-gray-500'>/ Dia</span></p>
+                <button class="text-xl text-yellow-custom2">
+                  Teste Drive
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </div>
+  
