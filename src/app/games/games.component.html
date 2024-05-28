@@ -9,8 +9,8 @@
             </div>
         <div class="bg-transparent carousel flex transition-transform duration-500">
             <div *ngFor="let game of games" class="bg-transparent carousel-item w-1/3 flex-shrink-0 p-4">
-                <div class="bg-blue-custom p-2 rounded-xl">
-                    <img [src]="game.image" alt="{{ game.name }}" class="w-full h-64 object-cover rounded-lg">
+                <div class="bg-blue-custom p-2">
+                    <img [src]="game.image" alt="{{ game.name }}" class="w-full h-64 object-cover">
                     <p class="bg-transparent text-2xl text-center my-2 text-white">{{ game.name }}</p>
                 </div>
             </div>

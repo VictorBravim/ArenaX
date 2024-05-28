@@ -14,7 +14,7 @@ export class ContactComponent {
     message: ''
   };
 
-  contactImage = 'assets/contact-banner.png';
+  contactImage = 'assets/images/contact.png';
 
   onSubmit() {
     console.log('Email:', this.contact.email);
