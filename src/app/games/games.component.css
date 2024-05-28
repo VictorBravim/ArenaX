@@ -1,6 +1,6 @@
 .carousel-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1800px;
   margin: auto;
 }
 
@@ -17,6 +17,10 @@
 
 .carousel-item img {
   border-radius: 5px;
+}
+
+.bg-blue-custom {
+  background-color: #050912;
 }
 
 button {

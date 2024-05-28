@@ -38,9 +38,9 @@ export class GamesComponent {
     { name: 'Genshin Impact', image: 'assets/images/genshin.png' },
     { name: 'Honkai Star Rail', image: 'assets/images/star.png' },
     { name: 'Valorant', image: 'assets/images/valorant.png' },
-    { name: 'Game 4', image: 'assets/images/genshin.png' },
-    { name: 'Game 5', image: 'assets/images/star.png' },
-    { name: 'Game 6', image: 'assets/images/valorant.png' },
+    { name: 'League of Legends', image: 'assets/images/league.png' },
+    { name: 'Fortnite', image: 'assets/images/fortnite.png' },
+    { name: 'Tower of Fantasy', image: 'assets/images/tower.png' },
   ];
 
   currentIndex = 0;
