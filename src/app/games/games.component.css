@@ -1,9 +1,32 @@
 .carousel-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 1400px;
   margin: auto;
 }
 
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
 .carousel-item {
-  flex-basis: 100%;
+  flex: 0 0 33.3333%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.carousel-item img {
+  border-radius: 5px;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 14px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button:hover {
+  background-color: rgba(129, 129, 129, 0.7);
 }
