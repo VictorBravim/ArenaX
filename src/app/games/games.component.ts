@@ -35,7 +35,7 @@ export class GamesComponent {
 
   updateBackgroundImage() {
     this.isMobile = window.innerWidth <= 768;
-    this.backgroundImage = this.isMobile ? 'assets/images/bg-mobile.png' : 'assets/images/bg.png';
+    this.backgroundImage = this.isMobile ? 'assets/images/bg-mobile2.png' : 'assets/images/bg2.png';
   }
 
   @ViewChild('slickModal') slickModal: SlickCarouselComponent | null = null;
