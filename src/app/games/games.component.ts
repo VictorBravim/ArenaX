@@ -1,12 +1,42 @@
 // src/app/games/games.component.ts
-import { Component, ViewChild } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, HostListener } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-games',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './games.component.html',
+  styleUrls: []
 })
 export class GamesComponent {
+  isMobile = false;
+  backgroundImage = '';
+
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.updateBackgroundImage();
+    }
+  }
+
+  get backgroundImageStyle() {
+    return isPlatformBrowser(this.platformId) ? { 'background-image': `url(${this.backgroundImage})` } : {};
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.updateBackgroundImage();
+    }
+  }
+
+  updateBackgroundImage() {
+    this.isMobile = window.innerWidth <= 768;
+    this.backgroundImage = this.isMobile ? 'assets/images/bg-mobile.png' : 'assets/images/bg.png';
+
+  }
+
   @ViewChild('slickModal') slickModal: SlickCarouselComponent;
 
   carros = [
