@@ -1,31 +1,11 @@
-<!-- src/app/games/games.component.html -->
-<div id="games" class="h-screen flex justify-center items-center mb-12 lg:mb-0 py-12 px-4 md:px-8 lg:px-16 bg-cover bg-center" [ngStyle]="backgroundImageStyle">
-    <div class="bg-transparent w-full py-12">
-      <div class="bg-transparent flex justify-between items-center px-5 lg:px-20">
-        <h1 class="bg-transparent text-white text-3xl lg:text-4xl lg:mb-4">Especiais de Hoje</h1>
-        <button class="bg-transparent text-white text-4xl" (click)="nextSlide()">
-          Proximo
-        </button>
+<div class="carousel-container overflow-hidden relative">
+    <div class="carousel flex transition-transform duration-500">
+      <div *ngFor="let game of games" class="carousel-item min-w-full flex-shrink-0">
+        <img [src]="game.image" alt="{{ game.name }}" class="w-full h-64 object-cover">
+        <p class="text-center mt-2">{{ game.name }}</p>
       </div>
-      <ngx-slick-carousel class="flex flex-row carousel" #slickModal="slick-carousel" [config]="sliderConfig">
-        <div ngxSlickItem *ngFor="let carro of carros" class="bg-transparent px-2 py-2 pb-4 ">
-          <div class="bg-transparent flex flex-col justify-center items-center p-4 overflow-hidden">
-            <img [src]="carro.imagem" [alt]="carro.nome" width="400" height="250" />
-            <div class="p-4 text-center">
-              <h3 class="text-xl font-semibold text-white mb-2">{{carro.nome}}</h3>
-              <div class="flex items-center justify-center mb-2">
-                <h4 class='text-lg text-gray-500'>Ano 2024</h4>
-              </div>
-              <div class="flex items-center justify-center gap-6">
-                <p class="text-xl text-yellow-custom2">{{carro.preco}} <span class='text-gray-500'>/ Dia</span></p>
-                <button class="text-xl text-yellow-custom2">
-                  Teste Drive
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ngx-slick-carousel>
     </div>
+    <button (click)="prev()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2">‹</button>
+    <button (click)="next()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2">›</button>
   </div>
   
