@@ -1,27 +1,53 @@
-# Arenax
+# 👾 ArenaX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+![image 1](https://github.com/VictorBravim/ArenaX/assets/122113588/66c50612-f8b7-4522-9043-05da0c0114aa)
 
-## Development server
+## 🚀 Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project is an Angular application aimed at showcasing various features related to gaming events. It includes a landing page with a navigation menu and sections for different types of content such as games, about, and contact information.
 
-## Code scaffolding
+## 📋 Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js and npm 
+- Angular CLI
 
-## Build
+## 🔧 Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository:
 
-## Running unit tests
+```
+git clone https://github.com/VictorBravim/ArenaX.git
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Navigate to the project directory:
 
-## Running end-to-end tests
+```
+cd ArenaX
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Install the dependencies:
 
-## Further help
+```
+npm install
+or
+yarn install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Run the development server:
+
+```
+ng serve --open
+```
+
+## 🛠️ Project Structure
+
+- NavComponent: Provides a navigation menu with links to different sections of the page.
+- HeroComponent: Displays a hero section with a title and background image.
+- GamesComponent: Features a carousel showcasing various gaming events.
+- AboutComponent: Contains information about the gaming event or organization.
+- ContactComponent: Displays contact information for users to get in touch.
+- FooterComponent: Shows a footer section with additional links or information.
+
+## 📄 License
+
+- This project is licensed under the [MIT License](LICENSE).
