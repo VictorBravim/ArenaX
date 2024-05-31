@@ -2,7 +2,7 @@
 
 ![image 1](https://github.com/VictorBravim/ArenaX/assets/122113588/66c50612-f8b7-4522-9043-05da0c0114aa)
 
-## 🚀 Overview
+## 🚀 Overview 
 
 This project is an Angular application aimed at showcasing various features related to gaming events. It includes a landing page with a navigation menu and sections for different types of content such as games, about, and contact information.
 
